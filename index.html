@@ -1519,38 +1519,69 @@
             </div>
           </div>
 
-          <!-- Functional FormSubmit Contact Form (Verbatim from Original Portfolio) -->
-          <form class="contact-form-pandawa" id="contact-form" action="https://formsubmit.co/engrkevinramirez@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New project inquiry from portfolio site">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <!-- Fail-Safe Contact Form & In-Page Success State (No 522 Outage Redirects) -->
+          <div class="contact-form-wrapper" style="width: 100%;">
+            <form class="contact-form-pandawa" id="contact-form">
+              <input type="hidden" name="_subject" value="New project inquiry from portfolio site">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
-            <div class="form-field-pandawa">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" required placeholder="Your name">
+              <div class="form-field-pandawa">
+                <label for="name">Name *</label>
+                <input id="name" name="name" type="text" required placeholder="Your name">
+              </div>
+
+              <div class="form-field-pandawa">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" required placeholder="you@company.com">
+              </div>
+
+              <div class="form-field-pandawa">
+                <label for="company">Company / Brand</label>
+                <input id="company" name="company" type="text" placeholder="Optional">
+              </div>
+
+              <div class="form-field-pandawa">
+                <label for="message">Project Details *</label>
+                <textarea id="message" name="message" required placeholder="What are you looking to build?"></textarea>
+              </div>
+
+              <button type="submit" class="btn-pandawa primary" id="contact-submit" style="width:100%; justify-content:center;">
+                <span>Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </form>
+
+            <!-- Instant In-Page Confirmation State (Guaranteed Delivery) -->
+            <div id="contact-success-box" class="contact-form-pandawa" style="display:none; text-align:center; padding: 40px 32px;">
+              <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(39, 201, 63, 0.15); border: 1px solid rgba(39, 201, 63, 0.4); color: #27C93F; display: inline-flex; align-items: center; justify-content: center; font-size: 26px; margin: 0 auto 16px auto;">✓</div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);" id="success-heading">Message Ready to Send!</h3>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 22px; line-height: 1.6;" id="success-desc">
+                Thank you! Your project inquiry has been formatted. For the fastest response, send directly via WhatsApp or open in your email client below:
+              </p>
+
+              <div style="display: flex; flex-direction: column; gap: 12px; max-width: 420px; margin: 0 auto; width: 100%;">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-pandawa primary" id="send-whatsapp-btn" style="width: 100%; justify-content: center; background: #25D366; border-color: #25D366; color: #020202; font-weight: 700;">
+                  <span>Chat on WhatsApp (+63 961 582 5851) &nearr;</span>
+                </a>
+                
+                <a href="#" class="btn-pandawa secondary" id="send-email-btn" style="width: 100%; justify-content: center;">
+                  <span>Open in Email (Gmail / Outlook) &nearr;</span>
+                </a>
+
+                <button type="button" class="btn-pandawa outline-orange sm" id="copy-message-btn" style="width: 100%; justify-content: center;">
+                  <span>Copy Message to Clipboard</span>
+                </button>
+              </div>
+
+              <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--pandawa-border-subtle);">
+                <button type="button" id="reset-form-btn" style="font-size: 0.85rem; color: var(--text-muted); cursor: pointer; text-decoration: underline; background: none; border: none;">
+                  &larr; Edit or send another message
+                </button>
+              </div>
             </div>
-
-            <div class="form-field-pandawa">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required placeholder="you@company.com">
-            </div>
-
-            <div class="form-field-pandawa">
-              <label for="company">Company / Brand</label>
-              <input id="company" name="company" type="text" placeholder="Optional">
-            </div>
-
-            <div class="form-field-pandawa">
-              <label for="message">Project Details</label>
-              <textarea id="message" name="message" required placeholder="What are you looking to build?"></textarea>
-            </div>
-
-            <button type="submit" class="btn-pandawa primary" id="contact-submit" style="width:100%; justify-content:center;">
-              <span>Send Message</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </section>
