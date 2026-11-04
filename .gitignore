@@ -1,0 +1,10 @@
+# Scratch & Temporary Testing Scripts
+scratch/
+.system_generated/
+*.log
+*.tmp
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
